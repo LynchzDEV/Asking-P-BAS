@@ -51,6 +51,7 @@ async function sendDiscordNotification(card) {
 
     const embed = {
       title: "📝 New Asking Card Created!",
+      description: "Click to view all cards: https://asking.lynchz.dev",
       color: 0x242634,
       fields,
       timestamp: card.createdAt,
