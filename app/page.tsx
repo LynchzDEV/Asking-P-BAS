@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { useSocket } from "@/hooks/useSocket";
 import Card from "@/components/Card";
 import CardForm from "@/components/CardForm";
@@ -18,7 +19,7 @@ export default function Home() {
           <div className="header-content">
             <div className="header-info">
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                <img 
+                <Image 
                   src="/favicon.svg" 
                   alt="Asking Card Logo" 
                   width={24} 

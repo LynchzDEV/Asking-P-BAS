@@ -110,8 +110,12 @@ app.prepare().then(() => {
 
   const io = new Server(httpServer, {
     cors: {
-      origin: "*",
+      origin: [
+        "http://localhost:3000",
+        "https://asking.lynchz.dev"
+      ],
       methods: ["GET", "POST"],
+      credentials: true
     },
   });
 

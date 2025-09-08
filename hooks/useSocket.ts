@@ -19,7 +19,27 @@ export const useSocket = (): UseSocketReturn => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
-    const socketInstance = io('http://localhost:3001');
+    // Determine the socket URL based on environment
+    const getSocketUrl = () => {
+      if (typeof window !== 'undefined') {
+        const protocol = window.location.protocol === 'https:' ? 'https:' : 'http:';
+        const hostname = window.location.hostname;
+        
+        // Use same port as the main app in production
+        if (hostname === 'asking.lynchz.dev') {
+          return `${protocol}//${hostname}`;
+        }
+        
+        // Local development
+        return 'http://localhost:3001';
+      }
+      return 'http://localhost:3001';
+    };
+
+    const socketInstance = io(getSocketUrl(), {
+      transports: ['websocket', 'polling'],
+      forceNew: true
+    });
     setSocket(socketInstance);
 
     socketInstance.on('connect', () => {
