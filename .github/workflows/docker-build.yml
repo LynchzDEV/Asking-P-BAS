@@ -2,10 +2,10 @@ name: Build and Push Multi-Architecture Docker Image
 
 on:
   push:
-    branches: [ "main", "master" ]
-    tags: [ 'v*.*.*' ]
+    branches: ["main", "master"]
+    tags: ["v*.*.*"]
   pull_request:
-    branches: [ "main", "master" ]
+    branches: ["main", "master"]
 
 env:
   # Use docker.io for Docker Hub if empty
@@ -40,7 +40,7 @@ jobs:
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
       # Extract metadata (tags, labels) for Docker
       - name: Extract metadata
