@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  asking-card:
+    image: lynchz/asking-p-bas:latest
+    container_name: asking-card
+    ports:
+      - "3000:3000"  # Single port for both Next.js and Socket.IO
+    environment:
+      - DISCORD_WEBHOOK_URL=your_webhook_url_here
+      - DISCORD_NOTIFICATIONS_ENABLED=true
+      - NODE_ENV=production
+      # The combined server runs on port 3000, so no separate socket URL needed
+    restart: unless-stopped
