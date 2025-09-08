@@ -85,7 +85,7 @@ export default function Home() {
               <h3 className="empty-title">No cards yet</h3>
               <p className="empty-description">
                 Tap &quot;Create Card&quot; to share your first question or
-                idea.
+                idea. Visit <a href="https://asking.lynchz.dev" className="link">asking.lynchz.dev</a> to join others.
               </p>
               {!showCreateForm && (
                 <button

@@ -6,10 +6,8 @@ services:
     container_name: asking-card
     ports:
       - "3004:3000"
-      - "3005:3001"
     environment:
-      - DISCORD_WEBHOOK_URL=your_webhook_url_here
+      - DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/1414490275719675994/vfpWc-MTrNzrAn0v5dXGrhC8nNq-Y9agUotC_J3NK5IoqwFnvHxE5a_viwuR7WcpIg3X
       - DISCORD_NOTIFICATIONS_ENABLED=true
-      - NEXT_PUBLIC_SOCKET_URL=https://asking.lynchz.dev:3005
       - NODE_ENV=production
     restart: unless-stopped

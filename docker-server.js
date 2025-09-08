@@ -60,7 +60,8 @@ async function sendDiscordNotification(card) {
 
     const embed = {
       title: "📝 New Asking Card Created!",
-      color: 0x000000,
+      description: "Click to view all cards: https://asking.lynchz.dev",
+      color: 0x242634,
       fields,
       timestamp: card.createdAt,
       footer: {
@@ -110,12 +111,9 @@ app.prepare().then(() => {
 
   const io = new Server(httpServer, {
     cors: {
-      origin: [
-        "http://localhost:3000",
-        "https://asking.lynchz.dev"
-      ],
+      origin: ["http://localhost:3000", "https://asking.lynchz.dev"],
       methods: ["GET", "POST"],
-      credentials: true
+      credentials: true,
     },
   });
 
