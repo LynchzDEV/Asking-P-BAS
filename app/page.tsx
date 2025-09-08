@@ -17,7 +17,16 @@ export default function Home() {
         <div className="container">
           <div className="header-content">
             <div className="header-info">
-              <h1 className="header-title">Asking Card</h1>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <img 
+                  src="/favicon.svg" 
+                  alt="Asking Card Logo" 
+                  width={24} 
+                  height={24}
+                  style={{ flexShrink: 0 }}
+                />
+                <h1 className="header-title">Asking Card</h1>
+              </div>
               <p className="header-subtitle">
                 {cards.length} {cards.length === 1 ? "card" : "cards"} shared
               </p>

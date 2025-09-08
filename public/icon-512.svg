@@ -1,0 +1,30 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" rx="64" fill="#F3F3F1"/>
+  
+  <!-- Card stack -->
+  <g transform="translate(80, 80)">
+    <!-- Shadow cards for depth -->
+    <rect x="32" y="32" width="320" height="192" rx="24" fill="#000" opacity="0.06"/>
+    <rect x="16" y="16" width="320" height="192" rx="24" fill="#000" opacity="0.12"/>
+    
+    <!-- Main card -->
+    <rect x="0" y="0" width="320" height="192" rx="24" fill="#000"/>
+    
+    <!-- Large question mark -->
+    <g transform="translate(160, 56)">
+      <path d="M-32 40 Q-32 16 -8 16 Q16 16 16 40 Q16 64 -8 72 V80 M-8 96 V112" 
+            stroke="#F3F3F1" 
+            stroke-width="16" 
+            stroke-linecap="round" 
+            fill="none"/>
+    </g>
+  </g>
+  
+  <!-- Bottom indicator -->
+  <g transform="translate(256, 384)">
+    <circle cx="-80" cy="32" r="12" fill="#000" opacity="0.25"/>
+    <circle cx="0" cy="32" r="12" fill="#000" opacity="0.45"/>
+    <circle cx="80" cy="32" r="12" fill="#000" opacity="0.65"/>
+  </g>
+</svg>
